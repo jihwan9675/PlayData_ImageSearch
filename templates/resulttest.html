@@ -1,0 +1,67 @@
+﻿
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>LOADING</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<link rel="stylesheet"
+          href="/static/SS.css">-->
+    <style>
+        body {
+            background-color: #cfd8dc;
+        }
+
+        div {
+            background-color: #cfd8dc;
+            font-family: 'Nanum Myeongjo', serif;
+            color: #37474f;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div id="container">
+        <br>
+        <div id="loginer">
+
+            <div id="form">
+                <form action="http://127.0.0.1:80/uploader" method="post"
+                      enctype="multipart/form-data">
+                      <img src="{{url_for('static',filename=name)}}" width="300" height="300" />
+                      
+                    <!-- <iframe src="https://www.google.com/search?q={{diease}}" frameborder="0" allowfullscreen="" class="naver" height="500" width="1200"></iframe> -->
+
+                      <iframe src="https://map.naver.com/v5/search/{{diease}}" frameborder="0" allowfullscreen="" class="naver" height="500" width="1200"></iframe>
+                    <br />
+                    <p>{{diease}}</p>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>LOADING</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<link rel="stylesheet"
+          href="/static/SS.css">-->
+    <style>
+        body {
+            background-color: #cfd8dc;
+        }
+
+        div {
+            background-color: #cfd8dc;
+            font-family: 'Nanum Myeongjo', serif;
+            color: #37474f;
+        }
+    </style>
+</head>

@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>simpleMap</title>
+    </head>
+    <script src="https://apis.openapi.sk.com/tmap/jsv2?version=1&appKey=l7xx0e603c37d0ce455494d3bf78fa995734"></script>
+    <script type="text/javascript">
+        function initTmap(lat, lon){
+            var map = new Tmapv2.Map("map_div",  
+            {
+                center: new Tmapv2.LatLng(lat, lon), // 지도 초기 좌표
+                width: "890px", 
+                height: "400px",
+                zoom: 15
+            });
+        } 
+    </script>
+    <script src="http://code.jquery.com/jquery-1.11.0.js"></script>
+    <script>
+        $(function() {        
+            // Geolocation API에 액세스할 수 있는지를 확인
+            if (navigator.geolocation) {
+                //위치 정보를 얻기
+                navigator.geolocation.getCurrentPosition (function(pos) {
+                    $('#latitude').html(pos.coords.latitude);     // 위도
+                    $('#longitude').html(pos.coords.longitude); // 경도
+                    initTmap(pos.coords.latitude,pos.coords.longitude)
+                });
+            } else {
+                alert("이 브라우저에서는 Geolocation이 지원되지 않습니다.")
+            }
+            
+        });
+    </script>
+    <body>
+        <div id="map_div">
+        </div>        
+    </body>
+</html>	

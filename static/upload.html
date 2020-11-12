@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>UPLOAD</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Girassol&display=swap');
+        body {
+            background-color: #cfd8dc;
+        }
+        input {
+            position: relative;
+            background-color: #cfd8dc;
+            color: #37474f;
+            border-color: #37474f;
+        }
+        button {
+            background-color: #37474f;
+            color: #ffffff;
+            width: 70px;
+            height: 30px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <!-- <header>
+        <img src="header.png">
+    </header> -->
+    <br>
+    <form action="http://127.0.0.1:80/uploader" method="post"
+          enctype="multipart/form-data">
+
+        <label style="color:#37474f; font-family: 'Nanum Myeongjo', serif;">찾으시는 목적지 사진을 업로드 해주세요.</label> <br /><br />
+        <input type="file" value="파일선택" name="file" />
+
+        <input type="submit" />
+        <br><br>
+    </form>
+    <script>
+        function removeCheck() {
+            if (confirm("정말 뒤로가시겠습니까??") == true) {
+                return location.href = './login.html';
+            } else {
+                return false;
+            }
+
+        }
+    </script>
+    <!-- <iframe src="https://map.naver.com/v5/search/계명대학교 행소박물관" frameborder="0" allowfullscreen="" class="naver" height="500" width="1200"></iframe> -->
+
+</body>
+</html>
