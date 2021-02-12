@@ -50,10 +50,10 @@ def upload_file():
         s = Place_Name[str(idx)]
         print(s) # 결과
 
-        return render_template('resulttest.html', name="./uploader/"+imageName, diease=s)
+        return render_template('search_place.html', name="./uploader/"+imageName, diease=s)
         
     
 if __name__=='__main__':
     Place_Name = load_name("category.csv") # 랜드마크 Dictionary 생성 --> (idx, Name)
     model = build_model(1049)
-    app.run(host="127.0.0.1", port="80", debug=True)
+    app.run(host="0.0.0.0", port="80", debug=True)

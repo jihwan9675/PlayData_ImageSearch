@@ -1,4 +1,0 @@
-tensorflow-cpu
-keras
-flask
-opencv-python
