@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>Cannot_Find</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<link rel="stylesheet"
+          href="/static/SS.css">-->
+    <style>
+        body {
+            background-color: #cfd8dc;
+        }
+
+        div {
+            background-color: #cfd8dc;
+            font-family: 'Nanum Myeongjo', serif;
+            color: #37474f;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div id="container">
+        <br>
+        <div id="loginer">
+
+            <div id="form">
+                <form action="/uploader" method="post"
+                      enctype="multipart/form-data">
+                      <img src="{{url_for('static',filename=name)}}" width="300" height="300" />
+                    <br />
+                    <p>아직 저의 역량이 부족하여 해당 이미지는 찾을 수 없습니다. 혹시 가능하시다면 위 사진의 결과를 입력해주실 수 있나요?</p>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>LOADING</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<link rel="stylesheet"
+          href="/static/SS.css">-->
+    <style>
+        body {
+            background-color: #cfd8dc;
+        }
+
+        div {
+            background-color: #cfd8dc;
+            font-family: 'Nanum Myeongjo', serif;
+            color: #37474f;
+        }
+    </style>
+</head>
